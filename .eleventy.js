@@ -1,8 +1,8 @@
 module.exports = function (eleventyConfig) {
     eleventyConfig.setTemplateFormats([
-        "md",
-        "css"
+        "md"
     ]);
+    eleventyConfig.addPassthroughCopy("./src/*.css");
     return {
         dir: {
             input: "src",
