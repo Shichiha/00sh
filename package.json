@@ -1,0 +1,13 @@
+{
+  "name": "shichihachi.github.io",
+  "version": "1.0.0",
+  "description": "frontend for my website (there is no backend)",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "pug": "^3.0.2"
+  }
+}

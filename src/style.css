@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400&family=Prompt&display=swap');
+
+:root {
+    --background: #222;
+    --text: lightgray;
+    --header-text: orange;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    max-width: 650px;
+    font-size: 18px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    margin: 0px;
+    align-items: center;
+
+}
+
+
+header > a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2
+}
+
+h1,h2,h3 {
+    color: var(--header-text);
+    font-family: 'Kanit', sans-serif;
+}
+
+a {
+    color: aquamarine;
+}
