@@ -13,11 +13,11 @@ That being said, I haven't made much.
 here are some of the projects that I've made in the past.
 
 ## What I'm most known for (probably) 😉
-- [Akebi](https://github.com/Akebi-Group/Akebi-GC)
+- [Akebi](https://github.com/Akebi-Group/Akebi-GC) (you might have to use Wayback machine)
 - [quackbot](https://github.com/Shichiha/quackbot)
 - [bark-engin](https://github.com/Shichiha/bark-engin)
 
 ## Where I'm at 👀
-[Github](https://github.com/Shichiha)  
+[Github](https://github.com/Shichiha) 
 [Discord](https://discord.com/users/703461363573456928)  
 [Twitter](https://twitter.com/00sh_chiha)  

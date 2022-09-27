@@ -1,15 +1,17 @@
 doctype html
-html
+html(lang="en")
     head
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         title= "🐝 Bee's nest - " + title
         meta(name="viewport", content="width=device-width, initial-scale=1")
         meta(name="description", content="🐝 Bee's nest - " + title )
-        link(rel="stylesheet", href="../../style.css")
+        link(rel="stylesheet", href="../../css/main.css")
     body
+        div(id="cursor")
         header
             h1= title
             a(href="/") home
         hr
         main!= content
+        script(defer src="../../scripts/index.js")
