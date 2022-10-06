@@ -1,5 +1,5 @@
 ---
-title: 🐝 Bee's nest 
+title: 🐝 Bee's nest  
 layout: "base.pug"
 ---
 
@@ -8,6 +8,8 @@ layout: "base.pug"
 <strong>Welcome to the Bee's nest</strong> where I place... my stuff? idk.
 
 ## pages
-{% for page in collections.pages %}
- [{{ page.data.title }}]({{ page.url}}) 
+<div class="pages">
+{% for page in collections.pages %}  
+[{{ page.data.title }} ー {{ page.data.created | date: "%m-%d-%y" }}]({{ page.url }})
 {% endfor %}
+</div>

@@ -1,5 +1,6 @@
 ---
-title: About Me
+title: About Me  
+layout: "base.pug"
 ---
 
 Hey! 👋

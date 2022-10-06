@@ -1,15 +1,9 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="utf-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        title= title
-        meta(name="viewport", content="width=device-width, initial-scale=1")
-        meta(name="description", content="🐝 Bee's nest")
-        link(rel="stylesheet", href="./css/main.css")
-    body
-        header
-            h1= title
-            a(href="/") home
-        hr
-        main!= content
+extends layout
+
+block extendHead
+    title= title
+    meta(name="description", content="🐝 Bee's nest")
+    link(rel="stylesheet", href="/css/main.css")
+
+block content
+    main!= content

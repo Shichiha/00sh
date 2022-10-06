@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+    
 background = #111
 text = lightgray
 header-text = orange
 
 body
-    font-family "Tahoma", sans-serif
+    font-family 'Readex Pro', sans-serif
     color text
     background-color background
     max-width 650px
     font-size 18px
     padding 0 10px
     margin 0 auto
+    line-height 2
 
 header
     display flex
@@ -17,15 +20,24 @@ header
     justify-content space-between
     margin 0px
     align-items center
-    a
-        display flex
-        justify-content flex-end
+a
+    justify-content flex-end
+    background-color #222
+    border-radius 10px
+    padding 10px
+    transition all 0.5s
+    margin 10px
+    &:hover
+        background-color #333
+        padding 9px
 
 h1,h2,h3
-    line-height 1.2
     color header-text
-    font-family sans-serif
+    transition all 0.1s
+    &:hover
+        text-indent 10px
+        
 
 a
-    color aquamarine
     text-decoration none
+    color white
