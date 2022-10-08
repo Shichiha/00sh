@@ -4,11 +4,11 @@
   "description": "frontend for https://00sh.cf/",
   "license": "MIT",
   "scripts": {
-    "watch:11ty": "eleventy --serve --quiet",
-    "watch:sass": "npx sass src/css:_site/css -w --no-source-map --quiet",
+    "watch:11ty": "eleventy --serve",
+    "watch:sass": "npx sass src/css:_site/css -w --no-source-map",
 
-    "build:11ty": "eleventy --quiet",
-    "build:sass": "npx sass src/css:_site/css --no-source-map --quiet",
+    "build:11ty": "eleventy",
+    "build:sass": "npx sass src/css:_site/css --no-source-map --verbose --version",
 
     "build": "concurrently \"npm run build:11ty\" \"npm run build:sass\"",
     "dev": "concurrently \"npm run watch:11ty\" \"npm run watch:sass\""
