@@ -1,0 +1,54 @@
+$content: #d3d3d3
+$links: #0af
+$header: #ffa500
+$f-family: 'Readex Pro', sans-serif
+$bg: #111
+$bg-2: #222
+@import "https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap"
+
+// 👇 デバッグ用
+// *
+// 	border: 1px solid red
+
+body 
+	font-family: $f-family 
+	color: $content 
+	background-color: $bg 
+	max-width: 650px 
+	font-size: 2.7vh 
+	padding: 0 10px 
+	margin: 0 auto 
+	line-height: 2
+	letter-spacing: 0.01em 
+header 
+	display: flex 
+	height: fit-content 
+	justify-content: space-between 
+	margin: 0px 
+	align-items: center 
+a 
+	text-decoration: none 
+	color: $links 
+	margin-right: 10px 
+h1,h2,h3,h4
+	color: $header 
+
+.pages
+	display: flex
+	gap: 10px
+.pageLink
+	background-color: $bg-2
+	padding: 10px
+	border-radius: 15px
+	text-align: center
+	color: gray
+	padding-inline: 10px
+	flex-direction: column
+
+ul
+	list-style-type: "👉"
+	padding: 0
+	margin: 0
+	text-indent: 10px
+li
+	margin-right: 10px

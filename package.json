@@ -1,24 +1,22 @@
 {
-  "name": "shichihachi.github.io",
-  "version": "1.0.0",
-  "description": "frontend for my website (there is no backend)",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "00sh",
+  "version": "2.0.0",
+  "description": "frontend for https://00sh.cf/",
+  "license": "MIT",
   "scripts": {
-    "build:stylus": "stylus --compress ./stylus/ --out ./src/css/",
-    "watch:stylus": "stylus --watch ./stylus/ --out ./src/css/",
-    "build:11ty": "eleventy",
-    "watch:11ty": "eleventy --serve",
-    "build": "yarn build:stylus && yarn build:11ty",
-    "dev": "concurrently -n stylus,11ty \"npm run watch:stylus\" \"npm run watch:11ty\""
+    "watch:11ty": "eleventy --serve --quiet",
+    "watch:sass": "npx sass src/css:_site/css -w --no-source-map --quiet",
+
+    "build:11ty": "eleventy --quiet",
+    "build:sass": "npx sass src/css:_site/css --no-source-map --quiet",
+
+    "build": "concurrently \"npm run build:11ty\" \"npm run build:sass\"",
+    "dev": "concurrently \"npm run watch:11ty\" \"npm run watch:sass\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "pug": "^3.0.2"
-  },
-  "dependencies": {
+    "pug": "^3.0.2",
+    "sass": "^1.55.0",
     "concurrently": "^7.4.0"
   }
 }

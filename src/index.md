@@ -9,7 +9,11 @@ layout: "base.pug"
 
 ## pages
 <div class="pages">
-{% for page in collections.pages %}  
-[{{ page.data.title }} ー {{ page.data.created | date: "%m-%d-%y" }}]({{ page.url }})
+<!-- 👇 ページを新しいものから古いものへ並べ替える -->
+{% assign pages = collections.pages | sort: 'date' | reverse %}
+{% for page in pages %}  
+<span class="pageLink">
+    <a href={{ page.url }}>{{  page.data.title  }}</a>{{ page.data.created | date: "%m-%d-%y" }}
+</span>
 {% endfor %}
 </div>

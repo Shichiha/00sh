@@ -7,10 +7,8 @@ html(lang="en")
         block extendHead 
     body
         header
-            h1= title
-            div
-                a(href="/about") about
-                a(href="/") home
+            include lib/navbar
+
         hr
         block extendHeader 
         block content
