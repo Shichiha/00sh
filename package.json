@@ -5,10 +5,10 @@
   "license": "MIT",
   "scripts": {
     "watch:11ty": "eleventy --serve",
-    "watch:sass": "npx sass src/css:_site/css -w --no-source-map",
+    "watch:sass": "npx sass src/css:_site/css --no-source-map --style compressed -w",
 
     "build:11ty": "eleventy",
-    "build:sass": "npx sass src/css:_site/css --no-source-map --verbose --version",
+    "build:sass": "npx sass src/css:_site/css --no-source-map --style compressed",
 
     "build": "concurrently \"npm run build:11ty\" \"npm run build:sass\"",
     "dev": "concurrently \"npm run watch:11ty\" \"npm run watch:sass\""
