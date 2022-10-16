@@ -1,14 +1,38 @@
-# 00sh 🔥
-Personal Blog-like (but not really) website built with 11ty (with [Markdown](https://github.com/markdown-it/markdown-it), [Pug](https://pugjs.org), and [Indented Sass](https://sass-lang.com/))
+# create-svelte
 
-## Development 
-Run `npm i` (in my case, `pnpm i`) to download all the dev-dependencies
-### Building the site
-Run `npm run build`, it will output the HTML, CSS files to the `_site` folder.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-### Serving Development Server
-Run `npm run dev`, it will build and serve files from: `_site` externally and locally on [localhost:8080](http://localhost:8080/) (on default) and rebuild it every time you make a change to any file in `src`
+## Creating a project
 
-## License 📝
+If you're seeing this, you've probably already done this step. Congrats!
 
-This repository has [MIT License](https://github.com/lancerossdev/eleventy-tailwind/blob/master/LICENSE).
+```bash
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
