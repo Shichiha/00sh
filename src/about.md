@@ -13,8 +13,7 @@ That being said, I haven't made much.
 
 here are some of the projects that I've made in the past.
 
-## Passion Projects 😉
-- [Akebi](https://github.com/Akebi-Group/Akebi-GC) (you might have to use the [Wayback machine](http://wayback.archive.org/))
+## Projects I've worked on 😉
 - [quackbot](https://github.com/Shichiha/quackbot)
 - [bark-engin](https://github.com/Shichiha/bark-engin)
 

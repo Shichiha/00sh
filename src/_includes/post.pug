@@ -1,11 +1,11 @@
 extends layout
 block extendHead
- title= "🐝 Bee's nest - " + title
- meta(name="description" content="🐝 Bee's nest - " + title )
- link(rel="stylesheet" href="../../css/main.css")
+	title= "🐝 Bee's nest - " + title
+	meta(name="description" content="🐝 Bee's nest - " + title )
+	link(rel="stylesheet" href="../../css/main.css")
 
 block content 
- main!= content
+	main!= content
 
 block extendHeader 
- span(style="color: gray;" title="all times are in UTC")= new Date(created * 1000).toLocaleString() 
+	span(style="color: gray;" title="all times are in UTC")= new Date(created * 1000).toLocaleString() 
