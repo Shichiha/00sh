@@ -1,0 +1,9 @@
+{
+	"prettier.documentSelectors": ["**/*.astro"],
+	"prettier.printWidth": 1200,
+	"prettier.proseWrap": "preserve",
+
+	"[astro]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}

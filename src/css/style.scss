@@ -2,20 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--accent: 124, 58, 237;
-	--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+html,
+body {
+  font-family: system-ui, sans-serif;
+  @apply h-screen;
 }
-html {
-	font-family: system-ui, sans-serif;
-	background-color: #F6F6F6;
+
+body {
+  @apply grid grid-flow-row bg-primary-light dark:bg-primary-dark;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 code {
-	font-family: Menlo, monospace;
+  font-family: Menlo, monospace;
 }
 
 main {
-	margin: auto;
-	padding: 1.5rem;
-	max-width: 60ch;
+  @apply p-4 max-w-3xl w-full mx-auto transition-all;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  @apply text-primary-dark dark:text-primary-light;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}
+
+h2 {
+  @apply text-2xl font-bold;
 }

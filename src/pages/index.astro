@@ -1,14 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Picture } from "@astrojs/image/components";
+import Card from "@components/Card.astro";
+import Me from "@images/me.png";
+import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="hot like fire 🔥">
-	<main>
-		<h1 class="text-4xl font-bold">hot like fire 🔥</h1>
-		<Card
-			title="Shichiha"
-			body="Teenage programmer who started in early 2022 as a hobby. makes programs for fun or ease-of-life."
-		/>
-	</main>
+  <main class="flex flex-col gap-4">
+    <div class="flex flex-row justify-center w-full">
+      <!-- Hero Section -->
+      <div class="grid grid-cols-1 sm:grid-cols-2">
+        <div class="px-8 flex flex-row items-center">
+          <div class="rounded-full overflow-hidden inline-flex m-8 sm:m-0">
+            <Picture src={Me} alt="Image of the author" aspectRatio="1:1" widths={[320]} loading="eager" sizes="640px" />
+          </div>
+        </div>
+        <Card>
+          <div class="flex flex-col justify-center">
+            <h2 class="text-2xl font-bold">Hi, I'm <span class="text-blue-500">Shichiha</span></h2>
+            <p class="text-lg">I'm a software engineer and designer from The Philippines. I'm a High School student and I'm currently learning Game development and Web development.</p>
+          </div>
+        </Card>
+      </div>
+    </div>
+
+  </main>
 </Layout>

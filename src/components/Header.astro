@@ -1,0 +1,32 @@
+---
+import ThemeButton from "./ThemeButton.astro";
+import { Icon } from "astro-icon";
+---
+
+<div class="px-4 py-2 flex flex-row backdrop-blur-lg bg-secondary-light/80 dark:bg-secondary-dark/90 h-20">
+  <div class="flex items-center">
+    <a class="text-blue-300 text-2xl font-heading w-fit pr-4" href="/"> shichiha</a>
+  </div>
+  <div class="flex flex-row justify-end w-full text-center items-center gap-9">
+    <a class="link hidden sm:block" href="/about">about</a>
+    <a class="link hidden sm:block" href="/contact">contact</a>
+    <a class="block sm:hidden text-white" href="/about" data-tooltip="about">
+      <div class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path fill="currentColor" d="M10.5 2.5a.5.5 0 1 0-1 0V3H4.75A2.75 2.75 0 0 0 2 5.75v6.502a2.75 2.75 0 0 0 2.75 2.75h1.816l-1.482 2.223a.5.5 0 0 0 .832.555l1.852-2.778h2.244V15H11.5a2.497 2.497 0 0 1 1.773-.99a3 3 0 1 1 4.728-3.668V5.751A2.752 2.752 0 0 0 15.25 3H10.5v-.5ZM5 6.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Zm.5 4.502h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1Zm0-2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM17.5 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0Zm1.5 4.5c0 1.245-1 2.5-3.5 2.5S12 17.75 12 16.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5Z"></path></svg>
+      </div>
+    </a>
+    <a class="block sm:hidden text-white" href="/contact" data-tooltip="contact">
+      <div class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path fill="currentColor" d="M19.75 4A2.25 2.25 0 0 1 22 6.25v11.505a2.25 2.25 0 0 1-2.25 2.25H4.25A2.25 2.25 0 0 1 2 17.755V6.25A2.25 2.25 0 0 1 4.25 4h15.5Zm-10 8.5h-3.5a.75.75 0 0 0-.743.648l-.007.102v.492l.008.108C5.67 14.964 6.602 15.5 8 15.5c1.331 0 2.24-.486 2.464-1.494l.028-.155l.008-.108v-.493a.75.75 0 0 0-.648-.743L9.75 12.5Zm8 .496h-4.498l-.102.007a.75.75 0 0 0 0 1.486l.102.007h4.498l.102-.007a.75.75 0 0 0 0-1.486l-.102-.007ZM8 8.502a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3Zm9.75.998h-4.498l-.102.007a.75.75 0 0 0 0 1.486l.102.007h4.498l.102-.007a.75.75 0 0 0 0-1.486L17.75 9.5Z"></path></svg>
+      </div>
+    </a>
+
+    <ThemeButton />
+  </div>
+</div>
+
+<style>
+  .link {
+    @apply text-2xl font-heading w-fit text-center text-tertiary-light;
+  }
+</style>
