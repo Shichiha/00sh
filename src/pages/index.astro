@@ -1,28 +1,71 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import Card from "@components/Card.astro";
-import Me from "@images/me.png";
-import Layout from "@layouts/Layout.astro";
+import Layout from "../layouts/base.astro";
+import Linkcard from "@components/LinkCard.astro";
+import Github from "@components/icons/github.astro";
+import Tag from "@components/Tag.astro";
 ---
 
-<Layout title="hot like fire 🔥">
-  <main class="flex flex-col gap-4">
-    <div class="flex flex-row justify-center w-full">
-      <!-- Hero Section -->
-      <div class="grid grid-cols-1 sm:grid-cols-2">
-        <div class="px-8 flex flex-row items-center">
-          <div class="rounded-full overflow-hidden inline-flex m-8 sm:m-0">
-            <Picture src={Me} alt="Image of the author" aspectRatio="1:1" widths={[320]} loading="eager" sizes="640px" />
-          </div>
-        </div>
-        <Card>
-          <div class="flex flex-col justify-center">
-            <h2 class="text-2xl font-bold">Hi, I'm <span class="text-blue-500">Shichiha</span></h2>
-            <p class="text-lg">I'm a software engineer and designer from The Philippines. I'm a High School student and I'm currently learning Game development and Web development.</p>
-          </div>
-        </Card>
+<Layout title="Shichiha">
+  <main class="flex flex-col">
+    <!-- Hero Section -->
+    <section>
+      <h2 class="section-title">Shichiha</h2>
+      <p class="section-subtitle">Software engineer and designer.</p>
+      <div>
+        <p class="text-2xl">High School Student from The Philippines. Interested in Video Game Development</p>
+        <a href="/about">Read more...</a>
       </div>
-    </div>
-
+    </section>
+    <!-- End Hero Section -->
+    <!-- Projects Section -->
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Things I've done in the past.</p>
+      <div class="grid lg:grid-cols-2 gap-4">
+        <Linkcard link="https://github.com/Shichiha/00sh">
+          <div class="flex flex-row justify-between">
+            <h4>00sh</h4>
+            <Github />
+          </div>
+          <div class="flex flex-row gap-2 mb-4">
+            <Tag>Astro</Tag>
+            <Tag>Tailwind</Tag>
+          </div>
+          <p>My Homepage.</p>
+        </Linkcard>
+        <Linkcard link="https://github.com/Shichiha/chirp">
+          <div class="flex flex-row justify-between">
+            <h4>chirp</h4>
+            <Github />
+          </div>
+          <div class="flex flex-row gap-2 mb-4">
+            <Tag>Deno</Tag>
+            <Tag>TypeScript</Tag>
+            <Tag>Harmony</Tag>
+          </div>
+          <p>Discord bot (learning purposes)</p>
+        </Linkcard>
+        <a href="/projects">See more...</a>
+      </div>
+    </section>
+    <!-- End Projects Section -->
+    <!-- Contact Section -->
+    <section>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Get in touch</p>
+      <div>
+        <p class="text-2xl">You can find me on <a href="https://twitter.com/00sh_chiha">Twitter</a> or <a href="https://github.com/Shichiha">Github</a>.</p>
+        <a href="/contact">Contact me...</a>
+      </div>
+    </section>
+    <!-- End Contact Section -->
   </main>
 </Layout>
+
+<style lang="scss">
+  main {
+    section {
+      width: 100%;
+    }
+  }
+</style>

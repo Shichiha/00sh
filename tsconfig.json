@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "types": ["@astrojs/image/client"],
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],

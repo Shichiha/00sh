@@ -7,8 +7,9 @@ module.exports = {
 				parser: 'astro',
 				printWidth: 1200,
 				proseWrap: 'preserve',
+			  
 			},
-		},
+		}
 	],
 
 };

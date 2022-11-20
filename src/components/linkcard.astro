@@ -1,0 +1,13 @@
+---
+import Card from "@components/card.astro"
+export interface props {
+	link: string;
+}
+const {link} = Astro.props;
+---
+
+<a href={link} class="no-underline">
+	<Card>
+		<slot />
+	</Card>
+</a>

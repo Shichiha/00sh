@@ -3,22 +3,24 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
-			fontFamily: {
-				'body': "sans-serif",
-				'heading': "Inter, sans-serif",
-			},
 			colors: {
-				'accent-light': '#d926a9',
-				'accent-dark': '#1fb2a6',
+				// Accent colors (for buttons, links, etc.)
+				'accent-dark': '#8B5CF6',
+				'accent-light': '#9F7AEA',
+				// Primary colors (for backgrounds, etc.)
+				'primary-light': '#fdf6e3',
+				'primary-dark': '#242430',
+				// Secondary colors (for when you need a little more contrast)
+				'secondary-light': '#eee8d5',
+				'secondary-dark': '#1d1d26',
+				
+				// Tertiary colors (for text, borders, etc.)
+				'tertiary-light': '#000000',
+				'tertiary-dark': '#6f7a96',
+				// Quaternary colors (for subtitles, etc.)
+				'quaternary-light': '#4e4e4e',
+				'quaternary-dark': '#626c85',
 
-				'primary-light': '#fff',
-				'primary-dark': '#1a1a1a',
-
-				'secondary-light': '#202020',
-				'secondary-dark': '#202020',
-
-				'tertiary-light': '#e5e7eb',
-				'tertiary-dark': '#202020',
 			}
 		},
 	},

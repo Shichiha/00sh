@@ -1,49 +1,12 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import Me from "@images/me.png";
-import Card from "../components/Card.astro";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/base.astro";
 ---
 
-<Layout title="About">
-  <main>
-
-    <!-- Hero Section -->
-    <div class="grid grid-cols-1 sm:grid-cols-2">
-      <div class="px-8 flex flex-row items-center">
-        <div class="rounded-full overflow-hidden inline-flex m-8 sm:m-0">
-          <Picture src={Me} alt="Image of the author" aspectRatio="1:1" widths={[320]} loading="eager" sizes="640px" />
-        </div>
-      </div>
-      <Card>
-          <h2 class="title">Hi, I'm <span class="text-blue-500">Shichiha</span></h2>
-          <p class="text-lg">I'm a software engineer and designer from The Philippines. I'm a High School student and I'm currently learning Game development and Web development.</p>
-      </Card>
-    </div>
-
-    <!-- More Stuff -->
-    <div class="grid grid-cols-1 mt-8 gap-8">
-      <Card>
-          <h2 class="title">I'm a <span class="text-blue-500">Software Engineer</span></h2>
-          <p class="content">I'm a software engineer. I love to create things and I'm currently learning Game development and Web development. I've been programming for almost a year and I'm still learning.</p>
-      </Card>
-      <Card>
-          <h2 class="title">I'm a <span class="text-blue-500">Designer</span></h2>
-          <p>I'm a software designer. I make things look good and layout things in a way that makes sense. I've been designing for about a year and I'm still learning.</p>
-      </Card>
-      <Card>
-          <h2 class="title">I'm a <span class="text-blue-500">Student</span></h2>
-          <p>I'm a High School student. I'm currently studying in The Philippines. I'm a sophomore and I plan on taking a Computer Science course. Because of this, my schedule is pretty busy so I don't have much time to work on my projects.</p>
-      </Card>
-    </div>
-  </main>
+<Layout title="About me">
+	<main>
+		<section>
+			<h2 class="section-title">About me</h2>
+			<p class="text-xl">Hi, I'm <strong>Shichiha</strong>, a web developer from <strong>The Philippines</strong>.</p>
+		</section>
+	</main>
 </Layout>
-
-<style lang="scss">
-  .title {
-    @apply text-2xl font-bold;
-  }
-  .content {
-    @apply text-lg;
-  }
-</style>
