@@ -16,10 +16,20 @@ body {
   @apply transition-colors duration-200 ease-out;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  @apply text-tertiary-light dark:text-tertiary-dark font-['Grand_Hotel'];
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-tertiary-light dark:text-tertiary-dark font-['Roboto_Condensed'];
 }
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-bold;
 }
 
@@ -47,7 +57,8 @@ h6 {
   @apply text-xl;
 }
 
-p,a {
+p,
+a {
   @apply text-tertiary-light dark:text-tertiary-dark;
 }
 
@@ -55,10 +66,9 @@ a {
   @apply underline hover:no-underline;
 }
 
-
 main {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply mx-auto px-4 max-w-7xl w-full flex-grow;
   section {
-    @apply my-8 py-8 max-w-4xl mx-auto;
+    @apply py-4
   }
 }

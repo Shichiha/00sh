@@ -5,7 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				// Accent colors (for buttons, links, etc.)
-				'accent-dark': '#8B5CF6',
+				'accent-dark': '#ff007f',
 				'accent-light': '#9F7AEA',
 				// Primary colors (for backgrounds, etc.)
 				'primary-light': '#fdf6e3',
@@ -16,7 +16,7 @@ module.exports = {
 				
 				// Tertiary colors (for text, borders, etc.)
 				'tertiary-light': '#000000',
-				'tertiary-dark': '#6f7a96',
+				'tertiary-dark': '#8894b3',
 				// Quaternary colors (for subtitles, etc.)
 				'quaternary-light': '#4e4e4e',
 				'quaternary-dark': '#626c85',

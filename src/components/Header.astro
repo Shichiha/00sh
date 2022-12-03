@@ -1,11 +1,11 @@
 ---
-import "@fontsource/grand-hotel";
+import "@fontsource/roboto-condensed";
 ---
 
-<nav class="bg-secondary-light/90 dark:bg-secondary-dark/50 backdrop-blur-xl w-full h-16 flex flex-row items-center justify-between p-4 sticky top-0 gap-4 font-['Grand_Hotel']">
+<nav class="bg-secondary-light/90 dark:bg-secondary-dark/50 backdrop-blur-xl w-full h-16 flex flex-row items-center justify-between p-4 sticky top-0 gap-4 font-['Roboto_Condensed'] transition-colors">
   <h3><a class="text-accent-light dark:text-accent-dark no-underline" href="/" id="title"></a></h3>
   <div class="px-4">
-    <button onclick="toggleDark()" class="w-12 h-12 fill-current block">
+    <button id="themeButton" class="w-12 h-12 fill-current block">
       <div class="dark:block hidden">
         <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"></path></svg>
       </div>
@@ -16,7 +16,7 @@ import "@fontsource/grand-hotel";
   </div>
 </nav>
 
-<script is:inline>
+<script>
   const dark = localStorage.getItem("dark");
   const darkMode = dark === "true" ? true : false;
 
@@ -26,8 +26,10 @@ import "@fontsource/grand-hotel";
 
   function toggleDark() {
     document.documentElement.classList.toggle("dark");
-    localStorage.setItem("dark", document.documentElement.classList.contains("dark"));
+    localStorage.setItem("dark", document.documentElement.classList.contains("dark") ? "true" : "false");
   }
 
   document.getElementById("title").innerHTML = document.location.hostname;
+
+  document.getElementById("themeButton").addEventListener("click", toggleDark);
 </script>

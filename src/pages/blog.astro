@@ -1,0 +1,59 @@
+---
+import Card from "@components/card.astro";
+import Layout from "@layouts/base.astro";
+---
+
+<Layout title="Blog">
+  <main>
+    <h1 class="text-4xl font-bold my-4">Blog</h1>
+    <template id="blogPost">
+      <Card>
+        <article>
+          <div class="flex flex-col md:flex-row">
+            <div>
+              <div>
+                <p data-marker="date" class="text-sm text-gray-500"></p>
+                <h1 data-marker="title" class="text-4xl font-bold text-primary-dark dark:text-primary-light"></h1>
+                <p data-marker="author" class="text-sm text-gray-500"></p>
+              </div>
+              <p data-marker="content" class="text-lg text-gray-500 dark:text-gray-400"></p>
+            </div>
+          </div>
+        </article>
+      </Card>
+    </template>
+
+    <div id="posts" class="mx-auto grid gap-4">
+      <div data-marker="loading" class="flex justify-center items-center mt-8">
+        <div class="animate-spin rounded-full h-32 w-32 border-b-8 border-tertiary-light dark:border-tertiary-dark"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    import { getBlogPosts } from "../auth";
+    let posts = getBlogPosts();
+    let template = document.getElementById("blogPost") as HTMLTemplateElement;
+
+    posts.then((posts) => {
+      let loading = document.querySelector('[data-marker="loading"]');
+      loading.remove();
+      posts.data.forEach((post) => {
+        let title = post.title;
+        let timestamp = post.created_at; // ISO 8601
+        let data = post.data;
+        let body = data.body;
+        let date = new Date(timestamp);
+        const truncate = (str: string, n: number) => (str.length > n ? str.substr(0, n - 1) + "..." : str);
+        let clone = template.content.cloneNode(true) as HTMLElement;
+        clone.querySelector('[data-marker="title"]').innerHTML = title;
+        clone.querySelector('[data-marker="date"]').innerHTML = date.toDateString();
+        clone.querySelector('[data-marker="author"]').innerHTML = post.author;
+        clone.querySelector('[data-marker="content"]').innerHTML = truncate(body, 200);
+        clone.querySelectorAll("[data-marker]").forEach((el) => el.removeAttribute("data-marker"));
+        document.querySelector("#posts").appendChild(clone);
+      });
+      template.remove();
+    });
+  </script>
+</Layout>

@@ -5,9 +5,9 @@ export interface Props {
 
 const { title } = Astro.props;
 
+import DownArrow from "@components/DownArrow.astro";
 import Header from "@components/Header.astro";
 import "../css/base.scss";
-
 ---
 
 <html lang="en">
@@ -20,6 +20,8 @@ import "../css/base.scss";
   </head>
   <body>
     <Header />
+    <DownArrow />
     <slot />
   </body>
+
 </html>

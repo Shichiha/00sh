@@ -6,7 +6,7 @@ import Tag from "@components/Tag.astro";
 ---
 
 <Layout title="Shichiha">
-  <main class="flex flex-col">
+  <main>
     <!-- Hero Section -->
     <section>
       <h2 class="section-title">Shichiha</h2>
@@ -17,6 +17,18 @@ import Tag from "@components/Tag.astro";
       </div>
     </section>
     <!-- End Hero Section -->
+
+    <!-- Blog Section -->
+    <section>
+      <div>
+        <h2 class="section-title">Blog</h2>
+        <p class="section-subtitle">My thoughts on the web.</p>
+      </div>
+      <p class="text-2xl">Sometimes I write about things, may it be about web development, design, or just my thoughts.</p>
+      <a href="/blog">See my blog</a>
+
+    </section>
+
     <!-- Projects Section -->
     <section>
       <h2 class="section-title">Projects</h2>
@@ -27,7 +39,7 @@ import Tag from "@components/Tag.astro";
             <h4>00sh</h4>
             <Github />
           </div>
-          <div class="flex flex-row gap-2 mb-4">
+          <div class="tags">
             <Tag>Astro</Tag>
             <Tag>Tailwind</Tag>
           </div>
@@ -38,7 +50,7 @@ import Tag from "@components/Tag.astro";
             <h4>chirp</h4>
             <Github />
           </div>
-          <div class="flex flex-row gap-2 mb-4">
+          <div class="tags">
             <Tag>Deno</Tag>
             <Tag>TypeScript</Tag>
             <Tag>Harmony</Tag>
@@ -49,6 +61,7 @@ import Tag from "@components/Tag.astro";
       </div>
     </section>
     <!-- End Projects Section -->
+
     <!-- Contact Section -->
     <section>
       <h2 class="section-title">Contact</h2>
@@ -63,9 +76,7 @@ import Tag from "@components/Tag.astro";
 </Layout>
 
 <style lang="scss">
-  main {
-    section {
-      width: 100%;
-    }
+  .tags {
+    @apply flex flex-row gap-2 my-2;
   }
 </style>
