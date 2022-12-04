@@ -5,7 +5,7 @@ module.exports = {
 			files: '*.astro',
 			options: {
 				parser: 'astro',
-				printWidth: 1200,
+				printWidth: 80,
 				proseWrap: 'preserve',
 			  
 			},
