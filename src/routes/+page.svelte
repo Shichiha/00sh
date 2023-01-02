@@ -1,5 +1,10 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import Popup from '$components/Popup.svelte';
+	let show = false;
+	const showPopup = () => {
+		show = true;
+	};
 </script>
 
 <main>
@@ -10,12 +15,20 @@
 	<div class="max-w-xl">
 		<hr />
 	</div>
-	<h1>Reach me at:</h1>
+	<div class="bg-black text-white max-w-fit px-2">
+		<h1>Reach me at:</h1>
+	</div>
 	<div class="flex flex-row gap-4 text-black">
 		<a href="https://github.com/Shichiha">
-			<Icon icon="logos:github-icon" class="w-10 h-10"></Icon>
+			<Icon icon="logos:github-icon" class="w-10 h-10" />
 		</a>
-		<button class="border-none bg-white " on:click={() => navigator.clipboard.writeText('Shichiha#9757')}>
+		<button
+			class="border-none bg-white "
+			on:click={() => {
+				navigator.clipboard.writeText('Shichiha#9757');
+				showPopup();
+			}}
+		>
 			<Icon icon="logos:discord-icon" class="w-10 h-10" />
 		</button>
 		<a href="https://twitter.com/00sh_chiha">
@@ -25,6 +38,13 @@
 			<Icon icon="logos:google-gmail" class="w-10 h-10" />
 		</a>
 	</div>
-	
 </main>
 
+<Popup {show}>
+	<h1>Tag Copied</h1>
+	<p>Discord tag has been copied to clipboard. <br /><b>Shichiha#9757</b></p>
+	<button
+		class="rounded-lg cursor-pointer mt-4 py-2 px-4 border-0 bg-gray-800 text-white text-xl w-full"
+		on:click={() => (show = !show)}>Close</button
+	>
+</Popup>

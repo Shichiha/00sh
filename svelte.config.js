@@ -11,7 +11,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			// $scripts: './src/scripts',
-			$styles: './src/styles'
+			$styles: './src/styles',
+			$components: './src/components'
 		}
 	}
 };
