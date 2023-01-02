@@ -1,10 +1,16 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import Popup from '$components/Popup.svelte';
+	import { onMount } from 'svelte';
 	let show = false;
 	const showPopup = () => {
 		show = true;
 	};
+	onMount(() => {
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') show = false;
+		});
+	});
 </script>
 
 <main>
