@@ -1,0 +1,19 @@
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Inter', sans-serif;
+	@apply appearance-none h-full;
+}
+
+p {
+	@apply text-xl;
+}
+
+main {
+	@apply m-4;
+}
+
+a {
+	color: currentColor;
+}

@@ -1,8 +1,0 @@
-# EditorConfig is awesome: https://EditorConfig.org
-
-# top-most EditorConfig file
-root = true
-
-[*.pug]
-indent_style = tab
-indent_size = 4
