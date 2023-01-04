@@ -1,56 +1,81 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import Popup from '$components/Popup.svelte';
-	import { onMount } from 'svelte';
-	let show = false;
-	const showPopup = () => {
-		show = true;
-	};
-	onMount(() => {
-		document.addEventListener('keydown', (e) => {
-			if (e.key === 'Escape') show = false;
-		});
-	});
+	import Tooltip from '$components/Tooltip.svelte';
+	let discordPopup = false;
 </script>
 
 <main>
 	<p class="text-6xl max-w-xl">
-		I am <b>Shichiha.</b> <br />
-		A fifteen year old Hobbyist.
+		<b>Shichiha.</b> <br />
+		A fifteen year old Computer Hobbyist.
 	</p>
+
 	<div class="max-w-xl">
 		<hr />
 	</div>
-	<div class="bg-black text-white max-w-fit px-2">
-		<h1>Reach me at:</h1>
-	</div>
-	<div class="flex flex-row gap-4 text-black">
-		<a href="https://github.com/Shichiha">
-			<Icon icon="logos:github-icon" class="w-10 h-10" />
-		</a>
-		<button
-			class="border-none bg-white "
-			on:click={() => {
-				navigator.clipboard.writeText('Shichiha#9757');
-				showPopup();
-			}}
-		>
-			<Icon icon="logos:discord-icon" class="w-10 h-10" />
-		</button>
-		<a href="https://twitter.com/00sh_chiha">
-			<Icon icon="logos:twitter" class="w-10 h-10" />
-		</a>
-		<a href="mailto:00sh.chiha@gmail.com">
-			<Icon icon="logos:google-gmail" class="w-10 h-10" />
-		</a>
+
+	<div class="flex flex-row gap-4">
+		<div class="flex flex-col items-center justify-center">
+			<h1 class="bg-black text-white max-w-fit px-2">Reach me at</h1>
+			<div class="flex flex-row gap-4">
+				<Tooltip>
+					<div slot="trigger">
+						<a href="https://github.com/Shichiha">
+							<Icon icon="logos:github-icon" class="w-10 h-10" />
+						</a>
+					</div>
+					<span>Github </span>
+				</Tooltip>
+				<Tooltip>
+					<div slot="trigger">
+						<button
+							class="border-none bg-white "
+							on:click={() => {
+								navigator.clipboard.writeText('Shichiha#9757');
+								discordPopup = true;
+							}}
+						>
+							<Icon icon="logos:discord-icon" class="w-10 h-10" />
+						</button>
+					</div>
+					<span>Discord</span>
+				</Tooltip>
+				<Tooltip>
+					<div slot="trigger">
+						<a href="https://twitter.com/00sh_chiha">
+							<Icon icon="logos:twitter" class="w-10 h-10" />
+						</a>
+					</div>
+					<span>Twitter</span>
+				</Tooltip>
+				<Tooltip>
+					<div slot="trigger">
+						<a href="mailto:00sh.chiha@gmail.com">
+							<Icon icon="logos:google-gmail" class="w-10 h-10" />
+						</a>
+					</div>
+					<span>Gmail</span>
+				</Tooltip>
+			</div>
+		</div>
+		<div>
+			<h1 class="bg-black text-white max-w-fit px-2">About</h1>
+			<div class="flex flex-col items-center justify-center">
+				<Tooltip>
+					<div slot="trigger">
+						<a href="https://blog.00sh.cf">
+							<Icon icon="logos:hashnode-icon" class="w-10 h-10" />
+						</a>
+					</div>
+					<span>My Blog</span>
+				</Tooltip>
+			</div>
+		</div>
 	</div>
 </main>
 
-<Popup {show}>
+<Popup bind:show={discordPopup}>
 	<h1>Tag Copied</h1>
 	<p>Discord tag has been copied to clipboard. <br /><b>Shichiha#9757</b></p>
-	<button
-		class="rounded-lg cursor-pointer mt-4 py-2 px-4 border-0 bg-gray-800 text-white text-xl w-full"
-		on:click={() => (show = !show)}>Close</button
-	>
 </Popup>
