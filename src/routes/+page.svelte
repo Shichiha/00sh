@@ -15,8 +15,8 @@
 		<hr />
 	</div>
 
-	<div class="flex flex-row gap-4">
-		<div class="flex flex-col items-center justify-center">
+	<div class="flex flex-col gap-4">
+		<div class="flex flex-col">
 			<h1 class="bg-black text-white max-w-fit px-2">Reach me at</h1>
 			<div class="flex flex-row gap-4">
 				<Tooltip>
@@ -25,7 +25,7 @@
 							<Icon icon="logos:github-icon" class="w-10 h-10" />
 						</a>
 					</div>
-					<span>Github </span>
+					<span>Github</span>
 				</Tooltip>
 				<Tooltip>
 					<div slot="trigger">
@@ -61,7 +61,7 @@
 		</div>
 		<div>
 			<h1 class="bg-black text-white max-w-fit px-2">About</h1>
-			<div class="flex flex-col items-center justify-center">
+			<div class="flex flex-col">
 				<Tooltip>
 					<div slot="trigger">
 						<a href="https://blog.00sh.cf">
