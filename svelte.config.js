@@ -12,7 +12,8 @@ const config = {
 		alias: {
 			// $scripts: './src/scripts',
 			$styles: './src/styles',
-			$components: './src/components'
+			$components: './src/components',
+			$partial: './src/partial'
 		}
 	}
 };

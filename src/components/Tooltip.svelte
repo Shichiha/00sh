@@ -19,10 +19,11 @@
 	<slot name="trigger" />
 </div>
 
+
 {#if isHovered}
 	<div
 		class="absolute bg-black rounded-lg py-2 px-4 text-white"
-		style={`top: ${el.offsetTop + el.clientHeight}px; left: ${el.offsetLeft}px;`}
+		style={`top: ${el.offsetTop + el.clientHeight}px; left: ${el.offsetLeft}px;`}		
 		transition:slide={{ duration: 100 }}
 	>
 		<slot />
