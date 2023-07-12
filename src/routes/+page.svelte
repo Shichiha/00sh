@@ -1,13 +1,20 @@
-<script>
+<script lang="ts">
 	import Socials from '$partial/Socials.svelte';
 	import Icon from '@iconify/svelte';
-	
+	export let data;
+
+	function calculateAge(birthday: Date) {
+		var ageDifMs = Date.now() - birthday.getTime();
+		var ageDate = new Date(ageDifMs); // miliseconds from epoch
+		return Math.abs(ageDate.getUTCFullYear() - 1970);
+	}
+	let age = calculateAge(new Date(data.BIRTHDAY));
 </script>
 
 <main>
 	<p class="text-6xl max-w-xl">
 		<b>Shichiha.</b> <br />
-		A fifteen year old Computer Hobbyist.
+		A {age} year old Computer Hobbyist.
 	</p>
 
 	<div class="max-w-xl">
